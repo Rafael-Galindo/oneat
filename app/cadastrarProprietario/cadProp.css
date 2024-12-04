@@ -1,0 +1,250 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2; /* Cor de fundo principal */
+    color: #333;
+    line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cpath fill='none' stroke='%23d3e0e0' stroke-width='1.5' d='M0 150 C 100 75 300 250 450 150 S 650 75 800 150 S 1000 300 1200 200'/%3E%3Cpath fill='none' stroke='%23b0c2c2' stroke-width='1.5' d='M0 350 C 150 200 350 450 550 350 S 750 200 950 350 S 1200 500 1200 400'/%3E%3Cpath fill='none' stroke='%239aa9a9' stroke-width='1.5' d='M0 550 C 200 400 400 650 650 550 S 850 400 1050 550 S 1200 700 1200 600'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    min-height: 100vh; /* Faz com que o body cubra toda a altura da janela */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: -1; /* Faz com que o overlay fique atrás do conteúdo */
+}
+
+body .container-rest:hover {
+    box-shadow: none;
+}
+
+/* Estilos gerais do contêiner */
+.container-rest {
+    margin-left: 300px;
+    width: 1200px;
+    max-width: 1200px; /* Reduzi o max-width para layouts maiores */
+    height: 650px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+/* Título */
+h2 {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+/* Barra de separação */
+#line {
+    border: 2px solid #007676;
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+/* Labels e Inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333333e7;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    width: 100%; /* Ajustar para largura total */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007676;
+    outline: none;
+}
+
+/* Layout do formulário */
+.form-container-rest {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.form-left {
+    width: 48%;
+}
+
+.form-right {
+    width: 48%;  /* Ajustado para 48% para balancear */
+    margin-top: 96px;
+}
+
+
+input#numero_restaurante {
+    width: 100%; /* Ajustar a largura do campo número */
+}
+
+/* Botão */
+.btn-rest {
+    margin-top: 50px;
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: #007676;
+    font-size: 16px;
+    border: 2px solid #007676;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-rest:hover {
+    background-color: #007676;
+    color: #fff;
+}
+
+/* Link de login */
+.login-link {
+    text-align: center; /* Centraliza o link */
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-link a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007676;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Estilo para os campos CEP e Estado */
+.form-left .cep {
+    width: 263px; /* Aumentando a largura do campo CEP */
+}
+
+.form-left .estado {
+    width: 263px; /* Reduzindo a largura do campo Estado */
+}
+
+.form-right .div-rua {
+    width: 363px;
+}
+
+.form-right .rua-numero {
+    width: 163px;
+}
+
+.form-left .div-cnpj{
+    width: 233px;
+}
+
+.form-left .div-telefone {
+    width: 293px;
+}
+
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-left, .form-right {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%; /* O botão ocupa a largura total no tablet */
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .rua-numero {
+        flex-direction: column;
+    }
+
+    input#numero_restaurante {
+        width: 100%; /* No mobile, o campo número também ocupa toda a largura */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .login-link {
+        font-size: 14px;
+        justify-content: center;
+    }
+}
