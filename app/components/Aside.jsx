@@ -47,7 +47,7 @@ const Aside = () => {
           <h3>Pedidos</h3>
         </Link>
 
-        <Link href="#" className="sidebar-link">
+        <Link href="/analytics" className="sidebar-link">
           <Insights />
           <h3>Analytics</h3>
         </Link>

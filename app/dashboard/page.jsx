@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/context/authContext'; // Importando o contexto de autenticação
 import Insights from '../components/Insights';
-import RecentOrders from '../components/RecentOrders';
+import RecentOrders from '../recentOrders/page';
 import SalesAnalytics from '../components/SalesAnalytics';
 import style from "../globals.css";
 import supabase from '@/supabase';

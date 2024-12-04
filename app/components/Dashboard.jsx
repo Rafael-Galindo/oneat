@@ -1,6 +1,6 @@
 import React from 'react';
 import Insights from './Insights';
-import RecentOrders from './RecentOrders';
+import RecentOrders from '../recentOrders/page';
 
 const Dashboard = () => {
   return (
